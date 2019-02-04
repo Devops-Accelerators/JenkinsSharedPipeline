@@ -27,6 +27,6 @@
         {
             "type": "shell",
             "scripts": ["~/example.sh"]
-        },
+        }
     ]
 }
