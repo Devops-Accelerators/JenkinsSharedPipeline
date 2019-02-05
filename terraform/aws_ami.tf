@@ -4,7 +4,7 @@ data "aws_ami" "ami" {
 
   filter {
     name   = "owner-alias"
-    values = ["amazon"]
+    values = ["self"]
   }
   name_regex = "^sas@123.*"
   owners     = ["self"]
