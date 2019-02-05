@@ -5,10 +5,6 @@ def call(String step=''){
   sh 'temp="variable \"AMI_ID\" { default = \""'
   sh 'temp2="\" }"'
   sh 'c=$temp$AMI_ID$temp2'
-  sh 'echo $c > ~/workspace/sas2/terraform/var.tf'
-  //sh 'content= \'variable "AMI_ID" { default = "\'${AMI_ID}\'" }\''
-  //sh 'dest= ~/workspace/sas2/terraform/var.tf'
-  //echo '"$content" > "$dest"' 
-//echo  'variable "AMI_ID" { default = "\'${AMI_ID}\'" }' > ~/workspace/sas2/terraform/var.tf 
+  echo "$c > ~/workspace/sas2/terraform/var.tf"
   echo "step :${step}"
   }
