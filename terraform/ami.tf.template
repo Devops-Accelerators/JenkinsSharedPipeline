@@ -1,4 +1,0 @@
-variable "ami" {
-  default     = "${AMI_GENERATED_BY_PACKER}"
-  description = "The latest AMI."
-}
