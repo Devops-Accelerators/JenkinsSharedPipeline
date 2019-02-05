@@ -2,7 +2,7 @@ provider "aws" {
           region ="eu-west-1"
         }
         resource "aws_instance" "inst" {
-          ami = "$${AMI_ID}"
+          ami = "var.AMI_ID"
           instance_type = "t2.micro"
 
         tags{
