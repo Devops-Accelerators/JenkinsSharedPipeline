@@ -4,7 +4,9 @@ def call(String step=''){
   sh 'AMI_ID=$(awk \'END {print $NF}\' ~/workspace/sas2/terraform/output.txt)'
   sh 'pwd'
   sh 'temp="variable \"AMI_ID\" { default = \""'
+   sh 'pwd'
   sh 'temp2="\" }"'
+   sh 'pwd'
   sh 'c="$temp$AMI_ID$temp2"'
   sh 'pwd'
   echo "$c "  //> ~/workspace/sas2/terraform/var.tf"
