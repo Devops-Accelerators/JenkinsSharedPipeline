@@ -8,7 +8,7 @@ def call(String step=''){
   sh 'pwd'
   sh 'temp2=\'"}\''
   sh 'pwd'
-  sh 'c="$temp$AMI_ID$temp2"'
+  sh 'c="$temp$temp2"'
   sh 'pwd'
   echo "$c "  //> ~/workspace/sas2/terraform/var.tf"
   echo "step :${step}"
