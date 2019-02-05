@@ -6,9 +6,11 @@ def call(String step=''){
   sh 'pwd'
   sh 'temp=\'variable "AMI_ID" { default = " \''
   sh 'pwd'
-  sh 'temp+=${AMI_ID}'
-  sh 'temp+=\'"}\''
+  sh 'c=$temp$AMI_ID'
+  //sh 'temp+=${AMI_ID}'
+  sh 'temp2=\'"}\''
   sh 'pwd'
   echo "$temp "  //> ~/workspace/sas2/terraform/var.tf"
+  echo "$c"
   echo "step :${step}"
   }
