@@ -4,7 +4,7 @@ def call(String step=''){
   sh 'AMI_ID=$(awk \'END {print $NF}\' ~/workspace/sas2/terraform/output.txt)' 
   sh 'chmod +x /var/lib/jenkins/workspace/sas2/resources/concat.sh'
   sh 'export AMI_ID'
-  sh '. ./var/lib/jenkins/workspace/sas2/resources/concat.sh'
+  sh './var/lib/jenkins/workspace/sas2/resources/concat.sh'
   
   //sh 'pwd'
   //sh 'temp=\'variable "AMI_ID" { default = " \''
