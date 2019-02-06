@@ -1,5 +1,5 @@
 AMI_ID=$1
-echo "$AMI_ID"
+echo "ami id is: $AMI_ID"
 temp='variable "AMI_ID" { default = " '
 temp2='"}'
 c=$temp$AMI_ID$temp2
