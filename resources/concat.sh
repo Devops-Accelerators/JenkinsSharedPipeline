@@ -1,4 +1,4 @@
-AMI_ID=$1
+AMI_ID=${AMI_ID}
 echo "ami id is: $AMI_ID"
 temp='variable "AMI_ID" { default = " '
 temp2='"}'
