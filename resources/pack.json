@@ -19,12 +19,6 @@
         }
     ],
     "provisioners": [
-          {
-           "type": "file",
-            "source": "/var/lib/jenkins/workspace/SAS_PUB/",
-            "destination": ".ssh/"
-
-        },
         {
            "type": "file",
             "source": "/var/lib/jenkins/workspace/sas2/resources/example.sh",
