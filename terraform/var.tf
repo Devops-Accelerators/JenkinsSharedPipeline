@@ -6,5 +6,5 @@
  # default = "{{env `SAS_PUB`}}"
 #}
 variable "key_name" {
-  default = "SAS_PRI..ppk"
+  default = "pipeline_pri"
 }
