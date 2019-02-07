@@ -1,7 +1,4 @@
- variable "ami" {
-  default = "${data.aws_ami.image.id}" 
-}
-variable "instance_type" {
+ variable "instance_type" {
   default = "t2.micro"
 }
 
