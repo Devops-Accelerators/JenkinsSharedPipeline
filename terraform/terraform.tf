@@ -7,7 +7,7 @@ resource "aws_key_pair" "sas"{
         }
 resource "aws_instance" "inst" {
           ami ="${var.ami}"
-          instance_type = "t2.micro" "${var.instance_type}"
+          instance_type ="${var.instance_type}"
           key_name = "${aws_key_pair.sas.id}"
         tags{
                 Name="my_instance1"
