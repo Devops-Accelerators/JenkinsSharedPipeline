@@ -3,7 +3,7 @@
 }
 
 variable "key_path" {
-  default = "${{SAS_PUB}}"
+  default = "${{env`SAS_PUB`}}"
 }
 variable "key_name" {
   default = "SAS_PRI..ppk"
