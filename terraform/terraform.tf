@@ -6,9 +6,8 @@ resource "aws_key_pair" "sas"{
           public_key = "${file("${var.key_path}")}"
         }
 resource "aws_instance" "inst" {
-          ami ="${var.ami}"
+          ami ="${data.aws_ami.image.id}"
           instance_type ="${var.instance_type}"
-          key_name = "${aws_key_pair.sas.id}"
         tags{
                 Name="my_instance1"
             }
