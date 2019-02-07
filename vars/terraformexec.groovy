@@ -1,5 +1,4 @@
-def call(String name='') {
-   sh 'terraform init /var/lib/jenkins/workspace/sas2/terraform/'
-   sh 'terraform apply -auto-approve /var/lib/jenkins/workspace/sas2/terraform/'
-   echo "step: ${name}"
+def call(String path='') {
+   sh 'terraform init ${path}'
+   sh 'terraform apply -auto-approve ${path}'
 }
