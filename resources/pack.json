@@ -27,7 +27,7 @@
         },
         {
             "type": "shell",
-            "scripts": ["/home/ubuntu/example.sh"]
+            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/example.sh"]
         }
     ]
 }
