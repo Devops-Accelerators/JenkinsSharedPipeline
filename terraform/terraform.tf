@@ -3,7 +3,7 @@ provider "aws" {
         }
 resource "aws_key_pair" "sas"{
           key_name = "${var.key_name}" 
-          public_key = "${file("${var.key_path}")}"
+          public_key = "{{env `SUB_PUB`}}" #"${file("${var.key_path}")}"
         }
 resource "aws_instance" "inst" {
           ami ="${data.aws_ami.image.id}"
