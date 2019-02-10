@@ -28,6 +28,16 @@
         {
             "type": "shell",
             "scripts": ["/var/lib/jenkins/workspace/sas2/resources/example.sh"]
+        },
+             {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/inst_tomcat.sh",
+            "destination": "/home/ubuntu/inst_tomcat.sh"
+
+        },
+        {
+            "type": "shell",
+            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/inst_tomcat.sh"]
         }
     ]
 }
