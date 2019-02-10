@@ -1,4 +1,5 @@
+echo "hello"
 sudo apt-get update -y
 sudo apt-get install nginx -y
-sudo service nginx start
+sudo systemctl start nginx
 echo "nginx installed successfully............"
