@@ -2,6 +2,7 @@
 "variables": {
         "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
           "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+        "sshpassword":"{{env `packer_pass`}}",
         "region": "eu-west-1"
     },
     "builders": [
@@ -16,7 +17,7 @@
              "ssh_username": "ubuntu",
             "type": "amazon-ebs",
             "communicator": "ssh",
-            "ssh_password":"{{env `packer_pass`}}"
+            "ssh_password":"{{user `sshpassword`}}"
         }
     ],
     "provisioners": [
