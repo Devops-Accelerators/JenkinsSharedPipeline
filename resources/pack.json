@@ -15,7 +15,8 @@
             "source_ami": "ami-bbc542c8",
              "ssh_username": "ubuntu",
             "type": "amazon-ebs",
-            "communicator": "ssh"
+            "communicator": "ssh",
+            "ssh_password":"{{env `packer_pass`}}"
         }
     ],
     "provisioners": [
