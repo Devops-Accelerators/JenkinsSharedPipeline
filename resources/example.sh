@@ -1,6 +1,8 @@
 echo "hello"
 sudo locale-gen de_DE.UTF-8 en_US.UTF-8
 sudo apt-get install language-pack-en -y
+export LC_ALL="en_US.UTF-8"
+sudo dpkg-reconfigure locales 
 locale
 sudo apt-get update -y
 sudo apt-get install nginx -y
