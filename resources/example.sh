@@ -2,7 +2,7 @@ export DEBIAN_FRONTEND=noninteractive
 echo "hello"
 sudo apt-get update -y
 sudo locale-gen en_US.UTF-8
-sudo apt-get install language-pack-en
+sudo apt-get install language-pack-en -y
 sudo dpkg-reconfigure locales
 sudo apt-get install nginx -y
 sudo systemctl start nginx
