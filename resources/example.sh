@@ -1,6 +1,6 @@
 echo "hello"
+sudo locale-gen en_US.UTF-8
 sudo apt-get update -y
-sudo apt-get install language-pack-en -y
 sudo apt-get install nginx -y
 sudo apt-get install ufw
 sudo ufw enable
