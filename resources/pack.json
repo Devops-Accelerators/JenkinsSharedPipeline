@@ -21,7 +21,16 @@
         }
     ],
     "provisioners": [
-        
+         {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/example.sh",
+            "destination": "/home/ubuntu/example.sh"
+
+        },
+        {
+            "type": "shell",
+            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/example.sh"]
+        },
              {
            "type": "file",
             "source": "/var/lib/jenkins/workspace/sas2/resources/inst_tomcat.sh",
