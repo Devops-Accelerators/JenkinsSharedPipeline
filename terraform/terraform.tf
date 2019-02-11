@@ -16,6 +16,7 @@ resource "aws_volume_attachment" "vol_att" {
  resource "aws_ebs_volume" "vol" {
  size              = 1
  availability_zone = "eu-west-1a"
+     type ="gp2"
  tags = {
     Name = "ebs_volume"
   }
