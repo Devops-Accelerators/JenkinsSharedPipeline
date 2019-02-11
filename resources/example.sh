@@ -1,6 +1,8 @@
 echo "hello"
 sudo apt-get update -y
 sudo apt-get install nginx -y
+sudo ufw enable
+sudo ufw allow 8080
 sudo ufw allow 'Nginx HTTP'
 sudo ufw status
 sudo systemctl start nginx
