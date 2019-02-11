@@ -1,4 +1,4 @@
-sudo apt-get install language-pack-en 
+sudo apt-get install language-pack-en -y
 echo "hello"
 sudo apt-get update -y
 sudo apt-get install nginx -y
