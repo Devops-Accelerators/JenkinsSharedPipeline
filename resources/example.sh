@@ -16,6 +16,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 locale-gen en_US.UTF-8
 sudo locale-gen
 sudo dpkg-reconfigure locales
+sudo locales
 sudo apt-get install nginx -y
 sudo systemctl start nginx
 sudo systemctl status nginx
