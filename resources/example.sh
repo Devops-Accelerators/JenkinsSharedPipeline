@@ -1,4 +1,5 @@
 echo "hello"
+sudo apt-get install language-pack-en -y
 sudo locale-gen en_US.UTF-8
 update-locale LANG=de_DE.UTF-8           
 update-locale LC_ALL="en_US.UTF-8" 
