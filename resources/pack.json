@@ -17,7 +17,8 @@
              "ssh_username": "ubuntu",
             "type": "amazon-ebs",
             "communicator": "ssh",
-            "ssh_password":"{{user `sshpassword`}}"
+            "ssh_password":"{{user `sshpassword`}}",
+             "ssh_pty":"true"
         }
     ],
     "provisioners": [
