@@ -1,9 +1,5 @@
 echo "hello"
 sudo apt-get install language-pack-en -y
-sudo locale-gen en_US.UTF-8
-update-locale LANG="en_US.UTF-8"           
-update-locale LC_ALL="en_US.UTF-8" 
-locale
 sudo apt-get update -y
 sudo apt-get install nginx -y
 sudo ufw enable
