@@ -8,6 +8,7 @@ resource "aws_instance" "inst" {
         tags{
                 Name="my_instance"
             }
+          }
 resource "aws_volume_attachment" "vol_att" {
   device_name = "/dev/sdh"
   volume_id   = "${aws_ebs_volume.vol.id}"
@@ -25,6 +26,6 @@ resource "aws_volume_attachment" "vol_att" {
 
 
           
-       }
+       
        
 
