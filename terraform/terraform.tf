@@ -4,8 +4,9 @@ provider "aws" {
 resource "aws_instance" "inst" {
           ami ="${data.aws_ami.image.id}"
           instance_type ="${var.instance_type}"
+          key_name="packkey"
         tags{
-                Name="my_instance1"
+                Name="my_instance"
             }
        }
        
