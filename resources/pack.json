@@ -40,6 +40,29 @@
         {
             "type": "shell",
             "scripts": ["/var/lib/jenkins/workspace/sas2/resources/docker.sh"]
-        }
+        },
+          {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/Dockerfile",
+            "destination": "/home/ubuntu/Dockerfile"
+
+        },
+        {
+            "type": "shell",
+            "inline": ["sudo docker build  -f /var/lib/jenkins/workspace/sas2/resources/Dockerfile",
+                      "docker images"]
+        },
+            {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/tomcat-users.xml",
+            "destination": "/home/ubuntu/tomcat-users.xml"
+
+        },
+            {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/context.xml",
+            "destination": "/home/ubuntu/context.xml"
+
+        },
     ]
 }
