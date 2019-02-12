@@ -61,7 +61,9 @@
             "type": "shell",
             "inline":  [ " sudo docker build /home/ubuntu/",
                         "echo foo",
-                       "sudo docker images"]
+                       "sudo docker images",
+                      "sudo docker run tomcat:latest"
+                       ]
                     
         }
            
