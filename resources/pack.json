@@ -59,7 +59,8 @@
             
             {
             "type": "shell",
-            "inline":  [ "docker build /var/lib/jenkins/workspace/sas2/resources/",
+            "inline":  [ "docker build /home/ubuntu/Dockerfile",
+                        "echo foo",
                        "docker images"]
                     
         }
