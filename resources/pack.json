@@ -62,7 +62,7 @@
             "inline":  [ " sudo docker build /home/ubuntu/",
                         "echo foo",
                        "sudo docker images",
-                       "sudo docker run -d -v $(pwd)/webapp/target:/opt/app {image_id} -name project1"
+                       "sudo docker run -d -v $(pwd)/webapp/target:/opt/app {image_id} -name project11"
                        ]
                     
         }
