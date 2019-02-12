@@ -59,9 +59,9 @@
             
             {
             "type": "shell",
-            "inline":  [ "docker build /home/ubuntu/",
+            "inline":  [ " sudo docker build /home/ubuntu/",
                         "echo foo",
-                       "docker images"]
+                       "sudo docker images"]
                     
         }
            
