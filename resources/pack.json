@@ -33,13 +33,38 @@
         },
              {
            "type": "file",
-            "source": "/var/lib/jenkins/workspace/sas2/resources/inst_tomcat.sh",
-            "destination": "/home/ubuntu/inst_tomcat.sh"
+            "source": "/var/lib/jenkins/workspace/sas2/resources/docker.sh",
+            "destination": "/home/ubuntu/docker.sh"
 
         },
         {
             "type": "shell",
-            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/inst_tomcat.sh"]
+            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/docker.sh"]
+        },
+             {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/Dockerfile",
+            "destination": "/home/ubuntu/Dockerfile"
+        },
+             {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/context.xml",
+            "destination": "/home/ubuntu/context.xml"
+        },
+             {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/tomcat-users.xml",
+            "destination": "/home/ubuntu/tomcat-users.xml"
+        },
+            
+            {
+            "type": "shell",
+            "inline":  [ "docker build /var/lib/jenkins/workspace/sas2/resources/",
+                       "docker images"]
+                    
         }
+           
+            
+            
     ]
 }
