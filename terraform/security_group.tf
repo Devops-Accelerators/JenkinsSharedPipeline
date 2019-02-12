@@ -1,5 +1,5 @@
 resource "aws_security_group" "default" {
-  name = "sas_security_group@{{timestamp}}"
+  name = "sas_security_group_{{timestamp}}"
 
   # Allow all inbound
   ingress {
