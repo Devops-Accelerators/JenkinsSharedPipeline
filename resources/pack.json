@@ -56,7 +56,11 @@
             "source": "/var/lib/jenkins/workspace/sas2/resources/tomcat-users.xml",
             "destination": "/home/ubuntu/tomcat-users.xml"
         },
-           
+            {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/resources/helloworld.war",
+            "destination": "/home/ubuntu/helloworld.war"
+        },
             {
             "type": "shell",
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
