@@ -6,6 +6,6 @@ WORKDIR /usr/local/tomcat
 
 ADD tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 ADD context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
-ADD ./warfile/helloworld.war /usr/local/tomcat/webapps
+ADD /var/lib/jenkins/workspace/sas2/dist/helloworld.war /usr/local/tomcat/webapps
 
 EXPOSE 8080
