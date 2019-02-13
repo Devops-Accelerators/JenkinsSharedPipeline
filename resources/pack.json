@@ -62,7 +62,7 @@
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
                         "echo foo",
                        "sudo docker images",
-                       "sudo docker run -dp 8081:8080 --detach sas",
+                       "sudo docker run -dp 8084:8080 --detach sas",
                        "sudo docker ps"
                        ]
                     
