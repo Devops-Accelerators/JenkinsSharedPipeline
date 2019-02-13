@@ -16,7 +16,7 @@ resource "aws_volume_attachment" "vol_att" {
   instance_id = "${aws_instance.inst.id}"
 }
  resource "aws_ebs_volume" "vol" {
- size              = 1
+ size              = 8
  availability_zone = "eu-west-1a"
  type              ="gp2"
  tags = {
