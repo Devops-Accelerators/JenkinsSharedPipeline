@@ -59,10 +59,10 @@
             
             {
             "type": "shell",
-            "inline":  [ " sudo docker build /home/ubuntu/",
+            "inline":  [ " sudo docker build -t sas /home/ubuntu/",
                         "echo foo",
-                       "sudo docker images --filter \"dangling=true\"",
-                       "sudo docker run -d {none} -name project11",
+                       "sudo docker images",
+                       "sudo docker run -d {sas} -name project11",
                        "sudo docker ps"
                        ]
                     
