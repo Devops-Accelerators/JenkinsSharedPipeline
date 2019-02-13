@@ -62,7 +62,7 @@
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
                         "echo foo",
                        "sudo docker images",
-                       "sudo docker run --detach sas",
+                       "sudo docker run -v /opt/tomcat/webapps/:/usr/local/tomcat/webapps/ -p 8080:8080--detach sas",
                        "sudo docker ps"
                        ]
                     
