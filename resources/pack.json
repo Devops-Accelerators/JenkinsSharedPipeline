@@ -56,6 +56,11 @@
             "source": "/var/lib/jenkins/workspace/sas2/resources/tomcat-users.xml",
             "destination": "/home/ubuntu/tomcat-users.xml"
         },
+            {
+           "type": "file",
+            "source": "/var/lib/jenkins/workspace/sas2/",
+            "destination": "/home/ubuntu/warfiles"
+        },
             
             {
             "type": "shell",
