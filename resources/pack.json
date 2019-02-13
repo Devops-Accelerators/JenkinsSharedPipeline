@@ -62,7 +62,7 @@
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
                         "echo foo",
                        "sudo docker images",
-                       "sudo docker run -v /var/lib/jenkins/workspace/:/usr/local/tomcat/webapps/ -p 8080:8080 --detach sas",
+                       "sudo docker run -v /var/lib/jenkins/workspace/spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/ -p 8080:8080 --detach sas",
                        "sudo docker ps"
                        ]
                     
