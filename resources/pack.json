@@ -62,7 +62,8 @@
             "inline":  [ " sudo docker build /home/ubuntu/",
                         "echo foo",
                        "sudo docker images --filter \"dangling=true\"",
-                       "sudo docker run -d {IMAGE ID} -name project11"
+                       "sudo docker run -d {none} -name project11",
+                       "sudo docker ps"
                        ]
                     
         }
