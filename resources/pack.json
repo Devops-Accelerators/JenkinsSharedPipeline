@@ -56,18 +56,13 @@
             "source": "/var/lib/jenkins/workspace/sas2/resources/tomcat-users.xml",
             "destination": "/home/ubuntu/tomcat-users.xml"
         },
-            {
-           "type": "file",
-            "source": "/var/lib/jenkins/workspace/sas2/",
-            "destination": "/home/ubuntu/warfiles"
-        },
-            
+           
             {
             "type": "shell",
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
                         "echo foo",
                        "sudo docker images",
-                       "sudo docker run -v /opt/tomcat/webapps/:/usr/local/tomcat/webapps/ -p 8080:8080--detach sas",
+                       "sudo docker run -v /var/lib/jenkins/workspace/:/usr/local/tomcat/webapps/ -p 8080:8080 --detach sas",
                        "sudo docker ps"
                        ]
                     
