@@ -61,8 +61,8 @@
             "type": "shell",
             "inline":  [ " sudo docker build /home/ubuntu/",
                         "echo foo",
-                       "sudo docker images",
-                       "sudo docker run -d -v $(pwd)/webapp/target:/usr/local/webapps {image_id} -name project11"
+                       "sudo docker images --filter "dangling=true",
+                       "sudo docker run -d {image_id} -name project11"
                        ]
                     
         }
