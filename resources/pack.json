@@ -62,7 +62,7 @@
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
                         "echo foo",
                        "sudo docker images",
-                       "sudo docker run -d sas --name project11",
+                       "sudo docker run sas --name project11",
                        "sudo docker ps"
                        ]
                     
