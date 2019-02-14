@@ -21,10 +21,13 @@
         }
     ],
     "provisioners": [
+             {
+            "type": "shell",
+            "inline": ["sudo apt-get install language-pack-en -y"]
+        },
         {
             "type": "shell",
-            "scripts": ["sudo apt-get install language-pack-en -y",
-                        "/var/lib/jenkins/workspace/sas2/resources/example.sh"]
+            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/example.sh"]
         },
         {
             "type": "shell",
