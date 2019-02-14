@@ -21,21 +21,10 @@
         }
     ],
     "provisioners": [
-         {
-           "type": "file",
-            "source": "/var/lib/jenkins/workspace/sas2/resources/example.sh",
-            "destination": "/home/ubuntu/example.sh"
-
-        },
         {
             "type": "shell",
-            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/example.sh"]
-        },
-             {
-           "type": "file",
-            "source": "/var/lib/jenkins/workspace/sas2/resources/docker.sh",
-            "destination": "/home/ubuntu/docker.sh"
-
+            "scripts": ["sudo apt-get install language-pack-en -y",
+                        "/var/lib/jenkins/workspace/sas2/resources/example.sh"]
         },
         {
             "type": "shell",
