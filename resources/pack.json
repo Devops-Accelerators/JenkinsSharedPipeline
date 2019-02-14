@@ -21,52 +21,38 @@
         }
     ],
     "provisioners": [
-             {
-            "type": "shell",
-            "inline": ["sudo apt-get update",
-                       "sudo locale-gen en_US.UTF-8"]
-        },
         {
             "type": "shell",
-            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/example.sh"]
+            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/example.sh",
+                       "/var/lib/jenkins/workspace/sas2/resources/docker.sh"]
         },
         {
-            "type": "shell",
-            "scripts": ["/var/lib/jenkins/workspace/sas2/resources/docker.sh"]
-        },
-             {
            "type": "file",
             "source": "/var/lib/jenkins/workspace/sas2/resources/Dockerfile",
             "destination": "/home/ubuntu/Dockerfile"
         },
-             {
+        {
            "type": "file",
             "source": "/var/lib/jenkins/workspace/sas2/resources/context.xml",
             "destination": "/home/ubuntu/context.xml"
         },
-             {
+        {
            "type": "file",
             "source": "/var/lib/jenkins/workspace/sas2/resources/tomcat-users.xml",
             "destination": "/home/ubuntu/tomcat-users.xml"
         },
-            {
+        {
            "type": "file",
             "source": "/var/lib/jenkins/workspace/sas2/resources/helloworld.war",
             "destination": "/home/ubuntu/helloworld.war"
         },
-            {
+        {
             "type": "shell",
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
-                        "echo foo",
-                       "sudo docker images",
-                       "sudo docker run -dp 8084:8080 --detach sas",
-                       "sudo docker ps"
-                       
+                         "sudo docker images",
+                         "sudo docker run -dp 8084:8080 --detach sas",
+                         "sudo docker ps"
                        ]
-                    
         }
-           
-            
-            
     ]
 }
