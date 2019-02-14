@@ -5,7 +5,7 @@ resource "aws_instance" "inst" {
           ami ="${data.aws_ami.image.id}"
           instance_type ="${var.instance_type}"
           key_name="packkey"
-          vpc_security_group_ids = ["sas_security_group.id"]
+          vpc_security_group_ids = ["${data.aws_security_group.default.id}"]
         tags{
                 Name="my_instance"
             }
