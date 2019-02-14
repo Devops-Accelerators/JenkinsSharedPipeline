@@ -1,4 +1,5 @@
 def info(path){
+  echo "${path}"
   path1='echo "${path}"'
   echo "${path1}"
   sh 'packer validate "${path1}'
