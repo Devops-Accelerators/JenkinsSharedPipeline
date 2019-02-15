@@ -15,9 +15,7 @@
             "region": "eu-west-1",
             "source_ami": "ami-bbc542c8",
              "ssh_username": "ubuntu",
-            "type": "amazon-ebs",
-            "communicator": "ssh",
-            "ssh_password":"{{user `sshpassword`}}"
+            "type": "amazon-ebs"
         }
     ],
     "provisioners": [
