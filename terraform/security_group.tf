@@ -1,5 +1,5 @@
 resource "aws_security_group" "default" {
-  name = "sas_security_group2"
+  name = "sas_security_group"
 
   
   ingress {
