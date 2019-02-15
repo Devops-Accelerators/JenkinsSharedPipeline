@@ -1,10 +1,10 @@
 resource "aws_security_group" "default" {
   name = "sas_security_group1"
 
-  # Allow all inbound
+  
   ingress {
     from_port   = 0
-    to_port     = 65535
+    to_port     = 8085
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
