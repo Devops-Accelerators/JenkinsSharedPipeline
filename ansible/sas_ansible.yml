@@ -1,0 +1,23 @@
+---
+- hosts: all
+  name: configuration play
+  user: ubuntu
+
+  gather_facts: false
+  pre_tasks:
+    - name: Install python for Ansible
+      become: true
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      changed_when: false
+
+ tasks:
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
+
+    -name: start a container
+     docker_container:
+   	 name: helloWorld
+    	image: sas
+    	state:restarted
