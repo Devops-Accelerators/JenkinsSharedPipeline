@@ -48,7 +48,7 @@
             "type": "shell",
             "inline":  [ " sudo docker build -t sas /home/ubuntu/",
                          "sudo docker images",
-                         "sudo docker run -dp 8084:8080 --detach sas --name helloWorld",
+                         "sudo docker run -dp 8084:8080 --detach sas",
                          "sudo docker ps"
                        ]
         }
