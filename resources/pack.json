@@ -44,13 +44,20 @@
             "source": "/var/lib/jenkins/workspace/sas2/resources/helloworld.war",
             "destination": "/home/ubuntu/helloworld.war"
         },
-        {
-            "type": "shell",
-            "inline":  [ " sudo docker build -t sas /home/ubuntu/",
-                         "sudo docker images",
-                         "sudo docker run --name helloWorld -dp 8084:8080 --detach sas",
+        #{
+         #   "type": "shell",
+          #  "inline":  [ " sudo docker build -t sas /home/ubuntu/",
+           #              "sudo docker images",
+            #             "sudo docker run --name helloWorld -dp 8084:8080 --detach sas",
+             #            "sudo docker ps"
+              #         ]
+        #}
+            
+           {
+           "type": "shell",
+            "inline":  [ "sudo docker run --name crudmysql -v /var/lib/data_storage:/var/lib/mysql -e MYSQL_DATABASE=crudMVCdb -e MYSQL_ROOT_PASSWORD=Welcome123 -dp 3306 mysql:5",
                          "sudo docker ps"
                        ]
-        }
+        } 
     ]
 }
