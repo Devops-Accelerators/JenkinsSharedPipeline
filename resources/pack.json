@@ -51,7 +51,7 @@
             "inline":  [ "sudo docker build -t sas /home/ubuntu/",
                           "sudo docker images",
                           "sudo docker run --name helloWorld -dp 8084:8080 --detach sas",
-                          "sudo docker run --name springmysql -v /var/lib/data_storage:/var/lib/mysql -e MYSQL_DATABASE=springdb -e MYSQL_ROOT_PASSWORD=Welcome123 -dp 3306 mysql:5",
+                          "sudo docker run --name springmysql -e MYSQL_DATABASE=springdb -e MYSQL_ROOT_PASSWORD=Welcome123 -dp 3306 mysql:5",
                           "sudo docker ps"
                        ]
         } 
