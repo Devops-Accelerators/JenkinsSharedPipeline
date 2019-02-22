@@ -41,7 +41,7 @@
         },
         {
            "type": "file",
-            "source": "/var/lib/jenkins/workspace/sas3/SpringMVCHibernate.war",
+            "source": "/var/lib/jenkins/workspace/sas3/target/SpringMVCHibernate.war",
             "destination": "/home/ubuntu/SpringMVCHibernate.war"
         },
        
