@@ -9,6 +9,22 @@ resource "aws_instance" "inst" {
         tags{
                 Name="my_instance"
             }
+         provisioner "file" {
+    source      = "~/mysql_add.sh"
+    destination = "/tmp/mysql_add.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x /tmp/mysql_add.sh",
+      "/tmp/mysql_add.sh args",
+    ]
+  }
+      connection {
+    type     = "ssh"
+    user     = "ubuntu"
+      key_name="packkey"
+  }
           }
 resource "aws_volume_attachment" "vol_att" {
   device_name = "/dev/sdh"
@@ -22,7 +38,6 @@ resource "aws_volume_attachment" "vol_att" {
  tags = {
     Name = "ebs_volume"
   }
-
 }
 
 
