@@ -23,7 +23,7 @@ resource "aws_instance" "inst" {
       connection {
     type     = "ssh"
     user     = "ubuntu"
-      key_name="packkey"
+     private_key="packkey"
   }
           }
 resource "aws_volume_attachment" "vol_att" {
