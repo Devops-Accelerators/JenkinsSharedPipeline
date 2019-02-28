@@ -9,9 +9,9 @@ resource "aws_instance" "inst" {
         tags{
                 Name="my_instance"
             }
-         provisioner "file" {
-    source      = "~/mysql_add.sh"
-    destination = "/tmp/mysql_add.sh"
+       #  provisioner "file" {
+   # source      = "~/mysql_add.sh"
+   # destination = "/tmp/mysql_add.sh"
   }
 
  # provisioner "remote-exec" {
