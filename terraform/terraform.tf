@@ -14,18 +14,18 @@ resource "aws_instance" "inst" {
     destination = "/tmp/mysql_add.sh"
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "chmod +x /tmp/mysql_add.sh",
-      "/tmp/mysql_add.sh args",
-    ]
-  }
-      connection {
-    type     = "ssh"
-    user     = "ubuntu"
-     private_key="${file("/home/ubuntu/packkey.pem")}"
-  }
-          }
+ # provisioner "remote-exec" {
+ #  inline = [
+ #    "chmod +x /tmp/mysql_add.sh",
+  #    "/tmp/mysql_add.sh args",
+   # ]
+  #}
+   #   connection {
+   # type     = "ssh"
+   # user     = "ubuntu"
+   #  private_key="${file("/home/ubuntu/packkey.pem")}"
+  #}
+      #    }
 resource "aws_volume_attachment" "vol_att" {
   device_name = "/dev/sdh"
   volume_id   = "${aws_ebs_volume.vol.id}"
