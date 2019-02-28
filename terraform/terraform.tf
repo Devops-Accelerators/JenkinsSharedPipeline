@@ -23,7 +23,7 @@ resource "aws_instance" "inst" {
       connection {
     type     = "ssh"
     user     = "ubuntu"
-     private_key="${file("/home/ubuntu/packkey.pem")}"
+     private_key = "${file("~/.ssh/packkey.pem")}"  
   }
           }
 resource "aws_volume_attachment" "vol_att" {
