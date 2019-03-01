@@ -10,7 +10,7 @@ resource "aws_instance" "inst" {
                 Name="my_instance"
             }
         provisioner "file" {
-    source      = "~/mysql_add.sh"
+    source      = "~/workspace/sas2/terraform/mysql_add.sh"
     destination = "/tmp/mysql_add.sh"
   }
 
