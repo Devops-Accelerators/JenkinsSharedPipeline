@@ -9,7 +9,7 @@ node {
     stage('Checkout external proj') {
         git branch: 'master',
             credentialsId: 'github',
-            url: 'https://github.com/soumianisoumya/groupWork.git'
+            url: 'https://github.com/MindtreeDevops/JenkinsSharedPipeline.git'
         
 
         sh "ls -lat"
