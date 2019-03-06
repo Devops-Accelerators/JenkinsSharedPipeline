@@ -26,10 +26,7 @@ Technologies Used :-
   
   * Docker for containerization
   
-  WorkFlow of the Pipeline :-
-  
-  ![Workflow](Workflow.png)
-  
+]
   
   
   
