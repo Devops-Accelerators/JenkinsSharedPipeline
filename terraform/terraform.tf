@@ -9,22 +9,7 @@ resource "aws_instance" "inst" {
         tags{
                 Name="my_instance"
             }
-        provisioner "file" {
-    source      = "~/workspace/sas2/terraform/mysql_add.sh"
-    destination = "/tmp/mysql_add.sh"
-  }
-
-  provisioner "remote-exec" {
-   inline = [
-     "chmod +x /tmp/mysql_add.sh",
-      "/tmp/mysql_add.sh args",
-    ]
-  }
-      connection {
-    type     = "ssh"
-    user     = "ubuntu"
-     private_key = "${file("~/packkey.pem")}"  
-  }
+        
           }
 resource "aws_volume_attachment" "vol_att" {
   device_name = "/dev/sdh"
