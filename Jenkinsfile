@@ -1,5 +1,5 @@
 @Library('my_shared_library')_
-properties([parameters([string(defaultValue: 'add this job name', description: '', name: 'job', trim: false), gitParameter(branch: '', branchFilter: '.*', defaultValue: 'origin/master', description: '', name: 'Branch', quickFilterEnabled: false, selectedValue: 'NONE', sortMode: 'NONE', tagFilter: '*', type: 'PT_BRANCH')])
+properties([parameters([string(defaultValue: 'add this job name', description: '', name: 'job', trim: false), gitParameter(branch: '', branchFilter: '.*', defaultValue: 'origin/master', description: '', name: 'Branch', quickFilterEnabled: false, selectedValue: 'NONE', sortMode: 'NONE', tagFilter: '*', type: 'PT_BRANCH')])])
 node {
     
     
