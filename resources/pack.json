@@ -21,27 +21,27 @@
     "provisioners": [
         {
             "type": "shell",
-            "scripts": ["/var/lib/jenkins/workspace/Infrastructure/resources/example.sh",
-                       "/var/lib/jenkins/workspace/Infrastructure/resources/docker.sh"]
+            "scripts": ["/var/lib/jenkins/workspace/resources/example.sh",
+                       "/var/lib/jenkins/workspace/resources/docker.sh"]
         },
         {
            "type": "file",
-            "source": "/var/lib/jenkins/workspace/Infrastructure/resources/Dockerfile",
+            "source": "/var/lib/jenkins/workspace/resources/Dockerfile",
             "destination": "/home/ubuntu/Dockerfile"
         },
         {
            "type": "file",
-            "source": "/var/lib/jenkins/workspace/Infrastructure/resources/context.xml",
+            "source": "/var/lib/jenkins/workspace/resources/context.xml",
             "destination": "/home/ubuntu/context.xml"
         },
         {
            "type": "file",
-            "source": "/var/lib/jenkins/workspace/Infrastructure/resources/tomcat-users.xml",
+            "source": "/var/lib/jenkins/workspace/resources/tomcat-users.xml",
             "destination": "/home/ubuntu/tomcat-users.xml"
         },
         {
            "type": "file",
-            "source": "/var/lib/jenkins/workspace/mavenBuild/target/SpringMVCHibernate.war",
+            "source": "/var/lib/jenkins/workspace/target/SpringMVCHibernate.war",
             "destination": "/home/ubuntu/SpringMVCHibernate.war"
         },
        
