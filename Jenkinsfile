@@ -17,13 +17,13 @@ node {
     
     stage('image create'){
          echo 'creating an image'
-        packerexec "/var/lib/jenkins/workspace/resources/pack.json"
+        packerexec "/var/lib/jenkins/workspace/resources/shared/pack.json"
     }
     stage('instance creation'){
         echo 'creating an instance'   
-        terraformexec "/var/lib/jenkins/workspace/terraform/"
+        terraformexec "/var/lib/jenkins/workspace/shared/terraform/"
     }
     stage('git remove'){
-        sh "rm -rf /var/lib/jenkins/workspace/*"
+        sh "rm -rf /var/lib/jenkins/workspace/shared/*"
     }
 }
