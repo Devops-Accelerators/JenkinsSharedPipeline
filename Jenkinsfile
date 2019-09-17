@@ -17,7 +17,7 @@ node {
     
     stage('image create'){
          echo 'creating an image'
-        packerexec "/var/lib/jenkins/workspace/resources/shared/pack.json"
+        packerexec "/var/lib/jenkins/workspace/shared/resources/pack.json"
     }
     stage('instance creation'){
         echo 'creating an instance'   
