@@ -6,9 +6,7 @@ resource "aws_instance" "inst" {
           instance_type ="${var.instance_type}"
           key_name="packkey"
           vpc_security_group_ids =["${aws_security_group.default.id}"]
-        tags{
-                Name="my_instance"
-            }
+        
         
           }
 resource "aws_volume_attachment" "vol_att" {
