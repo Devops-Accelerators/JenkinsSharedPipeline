@@ -20,7 +20,8 @@ node {
         packerexec "/var/lib/jenkins/workspace/shared/resources/pack.json"
     }
     stage('instance creation'){
-        echo 'creating an instance'   
+        echo 'creating an instance'
+        echo pwd
         terraformexec "/var/lib/jenkins/workspace/shared/terraform/"
     }
     stage('git remove'){
